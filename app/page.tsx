@@ -67,8 +67,15 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
-            href="https://github.com/LorenGrz/Prioria"
+            href="https://github.com/LorenGrz/Prioria/releases/latest/download/prioria.apk"
             className="flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-bold text-white shadow-md transition-transform hover:scale-[1.02]"
+          >
+            <Icon name="android" />
+            Descargar APK
+          </a>
+          <a
+            href="https://github.com/LorenGrz/Prioria"
+            className="flex items-center gap-2 rounded-xl border border-outline-variant px-6 py-3 font-bold text-primary transition-colors hover:bg-surface-container-low"
           >
             <Icon name="code" />
             Ver el código
