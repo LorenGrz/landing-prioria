@@ -18,15 +18,15 @@ npm run dev
 # http://localhost:3000
 ```
 
-## Build y deploy (S3 + CloudFront)
+## Build y deploy (GitHub Pages)
+
+Deploy automático: cada push a `master` dispara `.github/workflows/` (build + `actions/deploy-pages`). No hace falta build ni sync manual.
 
 ```bash
-npm run build   # genera ./out
-aws s3 sync out/ s3://prioria-landing-493735739644 --delete
-aws cloudfront create-invalidation --distribution-id E27GXNA3NNHD70 --paths "/*"
+npm run build   # genera ./out — solo para probar el build localmente
 ```
 
-**URL en vivo:** https://d1c6xk2jegfebf.cloudfront.net
+**URL en vivo:** https://lorengrz.github.io/landing-prioria/
 
 ## Contenido
 
