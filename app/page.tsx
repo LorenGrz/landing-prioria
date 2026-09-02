@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Icon from '../components/Icon';
 import PhoneFrame from '../components/PhoneFrame';
 
+// next/image with `unoptimized: true` does not auto-prefix basePath for
+// plain public/ files, so it's applied by hand here to match next.config.js.
+const base = process.env.GITHUB_ACTIONS ? '/landing-prioria' : '';
+
 const FEATURES = [
   {
     icon: 'notifications_active',
@@ -92,7 +96,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-start justify-center gap-10 px-6">
           <PhoneFrame label="Inicio">
             <Image
-              src="/screenshots/inicio.webp"
+              src={`${base}/screenshots/inicio.webp`}
               alt="Pantalla de inicio de Prioria con el resumen del día y la última notificación"
               width={1080}
               height={2305}
@@ -101,7 +105,7 @@ export default function Home() {
           </PhoneFrame>
           <PhoneFrame label="Historial">
             <Image
-              src="/screenshots/historial.webp"
+              src={`${base}/screenshots/historial.webp`}
               alt="Historial de alertas de Prioria clasificadas por prioridad"
               width={1080}
               height={2305}
@@ -110,7 +114,7 @@ export default function Home() {
           </PhoneFrame>
           <PhoneFrame label="Entrenar (chat con el agente)">
             <Image
-              src="/screenshots/entrenar.webp"
+              src={`${base}/screenshots/entrenar.webp`}
               alt="Chat de entrenamiento donde el usuario le enseña una regla al agente"
               width={1080}
               height={2305}
