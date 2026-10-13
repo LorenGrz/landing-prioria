@@ -1,6 +1,6 @@
 # landing-prioria
 
-Sitio estático de portfolio para [Prioria](https://github.com/LorenGrz/Prioria) — una app Android de priorización de notificaciones con IA.
+Sitio estático de portfolio para Prioria — una app Android de priorización de notificaciones con IA.
 
 No tiene servidor ni llamadas a API. Todo el contenido es una recreación estática de los mockups de la app para mostrar el proyecto en el portfolio.
 
@@ -36,5 +36,4 @@ npm run build   # genera ./out — solo para probar el build localmente
 
 ## Proyecto relacionado
 
-- App principal: [LorenGrz/Prioria](https://github.com/LorenGrz/Prioria)
-- Backend serverless: `Prioria/backend/` (AWS SAM — Lambda, Cognito, DynamoDB, Bedrock)
+- El código de la app (y su backend serverless en AWS SAM) es privado. El APK se publica en los releases de este repo: https://github.com/LorenGrz/landing-prioria/releases/latest/download/prioria.apk

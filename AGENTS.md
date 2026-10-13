@@ -11,7 +11,7 @@ Single source of truth for humans and AI agents (Codex, Cursor, Claude, others) 
 
 ## Purpose
 
-Sitio estático de portfolio para [Prioria](https://github.com/LorenGrz/Prioria) — una app Android de priorización de notificaciones con IA.
+Sitio estático de portfolio para Prioria — una app Android de priorización de notificaciones con IA.
 
 ## Stack
 
