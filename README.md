@@ -37,3 +37,15 @@ npm run build   # genera ./out — solo para probar el build localmente
 ## Proyecto relacionado
 
 - El código de la app (y su backend serverless en AWS SAM) es privado. El APK se publica en los releases de este repo: https://github.com/LorenGrz/landing-prioria/releases/latest/download/prioria.apk
+
+## Versión mínima de la app (`public/version.json`)
+
+La app de Prioria consulta `https://lorengrz.github.io/landing-prioria/version.json` para saber si la instalación está desactualizada. Solo lleva números (la URL de descarga está fija en la app):
+
+```json
+{ "minVersionCode": 30, "latestVersionCode": 30 }
+```
+
+- `latestVersionCode`: subirlo después de publicar cada APK nuevo (el `versionCode` es el `run_number` de GitHub Actions, o sea el `N` de `v1.0.N`). Las versiones menores ven un aviso opcional.
+- `minVersionCode`: subirlo solo cuando una versión vieja tiene que dejar de funcionar. Las versiones menores quedan bloqueadas con una pantalla de "Actualizá Prioria".
+- Push a `master` para publicarlo.
